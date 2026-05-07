@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendify Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader" id="loader"></div>
+    <header>
+        <div class="trendyfy-ops">
+            <h1>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i>Trendify</i>
+            </h1>
+        </div>
+
+       
+        
+        <div class="cart">
+            <div class="logo1"></div>
+            <button id="cart-button">Cart (0)</button>
+            <button id="login">login</button>
+          
+        </div>
+
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                all
+            </div>
+            <div class="panel-ops">
+                   <p>Today's Deals</p>
+                   <p>Registry</p>
+                   <p> Prime Video</p>
+                   <p>Gift Cards</p>
+                   <p> Customer Service</p>
+                   <p>Sel</p>
+            </div>
+            <div class="panel-deals">
+                Shop deals in electeonics
+            </div>
+        </div>
+    </header>
+    <div class="flash-sale-banner">
+  🎉 Big Sale Today! Up to 50% off on selected items! 🛍️
+</div>
+
+<div class="deal-timer">
+  🔥 Hurry! Offer ends in <span id="countdown">00:00:00</span>
+</div>
+
+
+
+    <div class="hero-section">
+        <div class="hero-msg">
+            <p>You are on trendyfy.com. You can also shop on trendyfy India for millions of products with fast local delivery.  <a>Click here to go to trendyfy.in</a></p>
+        </div>
+    </div>
+     <div class="hero-section2"></div>
+
+    
+    
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+               <h2>Get your game on</h2>
+            <div class="box-image" style="background-image :url('box1\ img.jpg')"></div>
+            <p>See more</p>
+              </div>
+        </div>
+        
+        <div class="box2 box"><div class="box-content">
+               <h2>Laptops for every need</h2>
+            <div class="box-image" style="background-image :url('box2.jpg')"></div>
+            <p>Find your laptop here</p>
+              </div>
+            </div>
+        <div class="box3 box"><div class="box-content">
+               <h2>Upgrade your office furniture</h2>
+            <div class="box-image" style="background-image :url('box3.jpg')"></div>
+            <p>Shop now</p>
+              </div>
+            </div>
+        <div class="box4 box"><div class="box-content">
+               <h2>A whole new way to work</h2>
+            <div class="box-image" style="background-image :url('box4.jpg')"></div>
+            <p>Shop personal computer</p>
+              </div>
+            </div>
+
+         <div class="box1 box">
+            <div class="box-content">
+               <h2>Transformers toys & more</h2>
+            <div class="box-image" style="background-image :url('box5.jpg')"></div>
+            <p>Shop now</p>
+              </div>
+        </div>
+        
+        <div class="box2 box"><div class="box-content">
+               <h2>Creating business solutions</h2>
+            <div class="box-image" style="background-image :url('box6.jpg')"></div>
+            <p>See more software product</p>
+              </div>
+            </div>
+        <div class="box3 box"><div class="box-content">
+               <h2>Get your game on</h2>
+            <div class="box-image" style="background-image :url('box1\ img.jpg')"></div>
+            <p>See more</p>
+              </div>
+            </div>
+        <div class="box4 box"><div class="box-content">
+               <h2>Get your game on</h2>
+            <div class="box-image" style="background-image :url('box1\ img.jpg')"></div>
+            <p>See more</p>
+              </div>
+            </div>
+    
+    </div>
+    
+
+        <main>
+        <section class="products">
+
+
+            <div class="product" data-id="1">
+                <img src="download (1).jpg" alt="product 1">
+                <h3>Google pixel 9 pro fold</h3>
+                <p>$10.00</p>
+                <div class="product-rating">⭐⭐⭐⭐☆ (4.0)</div>
+                 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-id="2">
+                <img src="jordan shoose.webp" alt="Product 2">
+                <h3> Air Jordan 14 Retro 'black toe</h3>
+                <p>$15.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-id="3">
+                <img src="macbook.jpg" alt="Product 3">
+                <h3>Customise your 14" MacBook Pro - Space Black</h3>
+                <p>$20.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+
+        <section id="cart-modal" class="cart-modal">
+            <div class="cart-modal-content">
+                <h2>Your Cart</h2>
+                <ul id="cart-items"></ul>
+                <p>Total: $<span id="total-price">0</span></p>
+                <button id="close-cart">Close</button>
+                
+            </div>
+        </section>
+    </main>
+    
+
+    <main>
+        <section class="products">
+            <div class="product" data-id="4">
+                <img src="clothes.webp" alt="product 4">
+                <h3>Organic Cotton Spaghetti Crop</h3>
+                <p>$70.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-id="5">
+                <img src="2clothes.webp" alt="Product 5">
+                <h3> Nyx
+                    Cotton Cargo Co-Ord Set</h3>
+                <p>$45.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-id="6">
+                <img src="boys clothes.avif" alt="Product 6">
+                <h3>ASOS DESIGN
+                    Striped Wide-Leg Pleated Trousers</h3>
+                <p>$50.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            
+        </section>
+        </main>
+
+
+        <main>
+            <section class="products">
+                <div class="product" data-id="7">
+                    <img src="girls clothes3.avif" alt="product 7">
+                    <h3>H&M Women High Denim Shorts</h3>
+                    <p>$30.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+    
+              
+                <div class="product" data-id="8">
+                    <img src="perfume.webp" alt="Product 8">
+                    <h3> Maison Francis Kurkdjian Baccarat Rouge 540 Edp 70Ml</h3>
+                    <p>$45.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+    
+                <div class="product" data-id="9">
+                    <img src="face wash.jpg" alt="Product 9">
+                    <h3>The Essence Foaming Cleanser - 125ml</h3>
+                    <p>$50.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+    
+                
+            </section>
+            </main>
+  
+            <main>
+                <section class="products">
+                    <div class="product" data-id="10">
+                        <img src="body creame.webp" alt="product 10">
+                        <h3>La Prairie Pure Gold Radiance Cream Luxury Cream With Moisturising Effect</h3>
+                        <p>$30.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+        
+                  
+                    <div class="product" data-id="11">
+                        <img src="cellular-hydralift-firming-mask.webp" alt="Product 11">
+                        <h3> La Prairie Cellular Hydralift Firming Mask Moisturising </h3>
+                        <p>$65.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+        
+                    <div class="product" data-id="12">
+                        <img src="chanel spray.jpg" alt="Product 12">
+                        <h3>Chanel No.5 Eau Premiere Spray 50ml/1.7oz</h3>
+                        <p>$20.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+        
+                    
+                </section>
+                </main>
+
+                <main>
+                    <section class="products">
+                        <div class="product" data-id="13">
+                            <img src="platinum rare.webp" alt="product 13">
+                            <h3>La Prairie Platinum Rare Cellular Night Elixir Rejuvenating Night Treatment</h3>
+                            <p>$10.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+            
+                      
+                        <div class="product" data-id="14">
+                            <img src="timetreasure.jpg" alt="Product 14">
+                            <h3> Timetreasure Honorstige Cream</h3>
+                            <p>$15.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+            
+                        <div class="product" data-id="15">
+                            <img src="platinum ring.webp" alt="Product 15">
+                            <h3>Emerald Cut 50.00ct Aquamarine & Diamond Platinum Ring</h3>
+                            <p>$20.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+            
+                        
+                    </section>
+                    </main>
+
+                    <main>
+                        <section class="products">
+                            <div class="product" data-id="16">
+                                <img src="watch.avif" alt="product 16">
+                                <h3>BVLGARI Serpenti Tubogas Watch</h3>
+                                <p>$10.00</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                
+                          
+                            <div class="product" data-id="17">
+                                <img src="panerai.avif" alt="Product 17">
+                                <h3> Panerai Submersible QuarantaQuattro Goldtech OroCarbo</h3>
+                                <p>$15.00</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                
+                            <div class="product" data-id="18">
+                                <img src="red ribbon shoose.png" alt="Product 18">
+                                <h3>Red Ribbon Recon x Air Jordan 1 Retro High 'Supreme & Louis Vuitton' Custom</h3>
+                                <p>$20.00</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                
+                            
+                        </section>
+                        </main>
+
+
+                        <!-- AI Size Recommendation -->
+<section class="size-recommend">
+  <h2>Find Your Perfect Size 👕</h2>
+  <label for="height">Enter Height (cm):</label>
+  <input type="number" id="height" placeholder="e.g. 170">
+  
+  <label for="weight">Enter Weight (kg):</label>
+  <input type="number" id="weight" placeholder="e.g. 65">
+  
+  <button id="recommendSizeBtn">Get Recommendation</button>
+  
+  <p id="sizeResult"></p>
+</section>
+
+<footer>
+        <div class="foot-panel1">
+            Back to top
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Trendify</a>
+                <a>Investor Relations</a>
+                <a>Trendify Devices</a>
+                <a>Trendify Science</a>
+            </ul>
+
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Trendify</a>
+                <a>Investor Relations</a>
+                <a>Trendify Devices</a>
+                <a>Trendify Science</a>
+            </ul>
+
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Trendify</a>
+                <a>Investor Relations</a>
+                <a>Trendify Devices</a>
+                <a>Trendify Science</a>
+            </ul>
+
+            <ul>
+                <p>Get to Know Us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Trendify</a>
+                <a>Investor Relations</a>
+                <a>Trendify Devices</a>
+                <a>Trendify Science</a>
+            </ul>
+
+        </div>
+
+        <div class="foot-panel3">
+            <div class="logo"></div>
+        </div>
+
+        <div class="newsletter">
+  <h3>Subscribe to our Newsletter</h3>
+  <input type="email" id="newsletter" placeholder="Enter your email">
+  <button id="subscribeBtn">Subscribe</button>
+</div>
+
+
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Condition of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choise</a>
+            </div>
+            <div class="copyright">
+                © 1996-2025, Trendify.com, Inc. or its affiliates
+            </div>
+        </div>
+     </footer>
+
+     <div id="toast" class="toast">✅ Subscribed Successfully!</div>
+
+
+
+     <div id="darkModeToggle">🌓 Dark Mode</div>
+     <body>
+
+<button id="scrollTopBtn">↑ Top</button>
+
+  <!-- Floating Chat Button -->
+
+<div id="chatSupport">💬 Chat with Us</div>
+
+<!-- Hidden Chat Popup -->
+<div id="chatBox" class="chat-box">
+  <div class="chat-header">
+    <span>Customer Support</span>
+    <button id="closeChat">✖</button>
+  </div>
+  <div class="chat-body">
+    <p>Hello! How can we help you?</p>
+    <!-- Add message input here if needed -->
+  </div>
+</div>
+</body>
+
+<div id="toast">Added to cart ✅</div>
+
+
+
+ <script src="script.js"></script>
+</body>
+</html>
